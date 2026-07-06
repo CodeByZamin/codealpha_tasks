@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="image.style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <!-- Header -->
+        <header class="gallery-header">
+            <h1>Image Gallery</h1>
+            
+            <!-- Category Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn" data-filter="people">People</button>
+                <button class="filter-btn" data-filter="animals">Animals</button>
+            </div>
+        </header>
+
+        <!-- Image Grid -->
+        <div class="image-grid" id="imageGrid">
+            <!-- Nature Category -->
+            <div class="image-item nature" data-category="nature">
+                <img src="https://wallpaperaccess.com/full/5101540.jpg" alt="Nature 1">
+                <div class="overlay">
+                    <span class="image-title">Nature 1</span>
+                </div>
+            </div>
+            
+            <div class="image-item nature" data-category="nature">
+                <img src="https://wallpaperaccess.com/full/5101327.jpg" alt="Nature 2">
+                <div class="overlay">
+                    <span class="image-title">Nature 2</span>
+                </div>
+            </div>
+
+            <div class="image-item nature" data-category="nature">
+                <img src="https://wallpapercave.com/wp/wp2599602.jpg" alt="Nature 3">
+                <div class="overlay">
+                    <span class="image-title">Nature 3</span>
+                </div>
+            </div>
+
+            <!-- Architecture Category -->
+            <div class="image-item architecture" data-category="architecture">
+                <img src="https://wallpapercave.com/wp/wp1895305.jpg" alt="Architecture 1">
+                <div class="overlay">
+                    <span class="image-title">Architecture 1</span>
+                </div>
+            </div>
+
+            <div class="image-item architecture" data-category="architecture">
+                <img src="https://cdn.pixabay.com/photo/2017/04/24/13/37/architecture-2256489_1280.jpg" alt="Architecture 2">
+                <div class="overlay">
+                    <span class="image-title">Architecture 2</span>
+                </div>
+            </div>
+
+            <div class="image-item architecture" data-category="architecture">
+                <img src="https://images.pexels.com/photos/157811/pexels-photo-157811.jpeg?cs=srgb&dl=pexels-yentl-jacobs-157811.jpg&fm=jpg" alt="Architecture 3">
+                <div class="overlay">
+                    <span class="image-title">Architecture 3</span>
+                </div>
+            </div>
+
+            <!-- People Category -->
+            <div class="image-item people" data-category="people">
+                <img src="https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?cs=srgb&dl=pexels-rdne-7551442.jpg&fm=jpg" alt="People 1">
+                <div class="overlay">
+                    <span class="image-title">People 1</span>
+                </div>
+            </div>
+
+            <div class="image-item people" data-category="people">
+                <img src="https://brownswire.usatoday.com/gcdn/-mm-/ca115edcb64d3cb30bc6009b3eda7e540abeebd7/c=0-189-2048-1346/local/-/media/2017/04/04/Phoenix/Phoenix/636269196649663952-17620145-1620073418022851-5395923675950553249-o.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp" alt="People 2">
+                <div class="overlay">
+                    <span class="image-title">People 2</span>
+                </div>
+            </div>
+
+            <div class="image-item people" data-category="people">
+                <img src="https://fightingirishwire.usatoday.com/gcdn/authoring/authoring-images/2025/04/19/PDTF/83176433007-trump-protest-041925-es-07.jpg?crop=2399,1350,x0,y146&width=2399&height=1350&format=pjpg&auto=webp" alt="People 3">
+                <div class="overlay">
+                    <span class="image-title">People 3</span>
+                </div>
+            </div>
+
+            <!-- Animals Category -->
+            <div class="image-item animals" data-category="animals">
+                <img src="https://images.pexels.com/photos/29973784/pexels-photo-29973784.jpeg?cs=srgb&dl=pexels-caleb-falkenhagen-216813613-29973784.jpg&fm=jpg" alt="Animals 1">
+                <div class="overlay">
+                    <span class="image-title">Animals 1</span>
+                </div>
+            </div>
+
+            <div class="image-item animals" data-category="animals">
+                <img src="https://images.pexels.com/photos/236230/pexels-photo-236230.jpeg?cs=srgb&dl=cute-animals-pets-236230.jpg&fm=jpg" alt="Animals 2">
+                <div class="overlay">
+                    <span class="image-title">Animals 2</span>
+                </div>
+            </div>
+
+            <div class="image-item animals" data-category="animals">
+                <img src="https://i.natgeofe.com/k/83951dcc-1e06-4d39-9eaf-095c4dddf4a6/ww-funny-animal-faces-giant-panda_3x2.jpg" alt="Animals 3">
+                <div class="overlay">
+                    <span class="image-title">Animals 3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="nav-btn prev-btn" id="prevBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+
+        <button class="nav-btn next-btn" id="nextBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <svg width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            </svg>
+        </button>
+
+        <button class="lightbox-nav prev-lightbox" id="prevLightbox">
+            <svg width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+
+        <button class="lightbox-nav next-lightbox" id="nextLightbox">
+            <svg width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="image.script.js"></script>
+</body>
+</html>
